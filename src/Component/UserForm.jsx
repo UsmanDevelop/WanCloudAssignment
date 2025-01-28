@@ -65,7 +65,7 @@ const UserForm = () => {
               value={formData.phone}
               onChange={handleChange}
               placeholder="Phone: 03xxxxxxxxx *"
-              pattern="03[0-9]{2}[0-9]{7}"
+              pattern="03[0-9]{9}"
               required
               className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
