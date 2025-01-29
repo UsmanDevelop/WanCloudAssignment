@@ -37,58 +37,109 @@ const UserForm = () => {
     <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="h-screen flex items-center justify-center bg-slate-200 p-4">
       <div className="bg-white shadow-lg rounded-lg flex items-center max-w-lg w-full p-8">
         <div className="w-full">
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Contact Information</h2>
-          <p className="text-sm text-gray-500 mb-4">* Required</p>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4 ">Contact Information</h2>
+          <p className="text-sm text-gray-500 mb-5">* Required</p>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="text"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              placeholder="First Name *"
-              required
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="text"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              placeholder="Last Name *"
-              required
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="Phone: 03xxxxxxxxx * - 11 digit Number"
-              pattern="03[0-9]{9}"
-              required
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <div className="relative w-full">
 
-            <input
-              type="text"
-              name="address"
-              value={formData.address}
-              onChange={handleChange}
-              placeholder="Address *"
-              required
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                placeholder=" "
+                required
+                className="peer w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <label
+                className="cursor-text absolute left-2 bottom-8 text-gray-500 text-sm transition-all peer-placeholder-shown:bottom-3 peer-placeholder-shown:text-sm peer-focus:bottom-8 peer-focus:text-sm peer-focus:text-blue-500 bg-white px-1"
+                htmlFor="firstName"
+              >
+                First Name *
+              </label>
+            </div>
 
-            <input
-              type="text"
-              name="company"
-              value={formData.company}
-              onChange={handleChange}
-              placeholder="Company *"
-              required
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            <div className="relative w-full">
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                placeholder=" "
+                required
+                className="peer w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <label
+                className="cursor-text absolute left-2 bottom-8 text-gray-500 text-sm transition-all peer-placeholder-shown:bottom-3 peer-placeholder-shown:text-sm peer-focus:bottom-8 peer-focus:text-sm peer-focus:text-blue-500 bg-white px-1"
+                htmlFor="lastName"
+              >
+                Last Name *
+              </label>
+            </div>
+
+            <div className="relative w-full">
+
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder=" "
+                pattern="03[0-9]{9}"
+                required
+                className="peer w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <label
+                className="peer cursor-text absolute left-2 bottom-8 text-gray-500 text-sm transition-all peer-placeholder-shown:bottom-3 peer-placeholder-shown:text-sm peer-focus:bottom-8 peer-focus:text-sm peer-focus:text-blue-500 bg-white px-1"
+                htmlFor="phone"
+              >
+                Phone: 03xxxxxxxxx - 11 digit Number *
+              </label>
+            </div>
+
+            <div className="relative w-full">
+
+              <input
+                type="text"
+                name="address"
+                id="address"
+                value={formData.address}
+                onChange={handleChange}
+                placeholder=" "
+                required
+                className="peer w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <label
+                className="peer cursor-text absolute left-2 bottom-8 text-gray-500 text-sm transition-all peer-placeholder-shown:bottom-3 peer-placeholder-shown:text-sm peer-focus:bottom-8 peer-focus:text-sm peer-focus:text-blue-500 bg-white px-1"
+                htmlFor="address"
+              >
+                Address *
+              </label>
+            </div>
+
+            <div className="relative w-full">
+
+              <input
+                type="text"
+                name="company"
+                id="company"
+                value={formData.company}
+                onChange={handleChange}
+                placeholder=" "
+                required
+                className="peer w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <label
+                className="peer cursor-text absolute left-2 bottom-8 text-gray-500 text-sm transition-all peer-placeholder-shown:bottom-3 peer-placeholder-shown:text-sm peer-focus:bottom-8 peer-focus:text-sm peer-focus:text-blue-500 bg-white px-1"
+                htmlFor="company"
+              >
+                Company *
+              </label>
+            </div>
 
             <button
               type="submit"
